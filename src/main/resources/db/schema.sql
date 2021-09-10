@@ -13,7 +13,7 @@ CREATE TABLE if not exists GAME (
     dau1 integer,
 	dau2 integer,
 	resultat Boolean, 
-	USUARIID integer
+	usuariId integer
 );
 
 ALTER TABLE GAME

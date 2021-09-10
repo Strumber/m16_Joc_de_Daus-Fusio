@@ -24,20 +24,21 @@ import cat.daus.repository.PlayerRepository;
 @RestController
 @RequestMapping("")
 public class Controlador {
-	int idGame = 1;
+	
+	//int idGame = 1;
 	@Autowired
 	private PlayerRepository playerRepositori;
 
 	@Autowired
 	private GameRepositori gameRepositori;
 
-	
-	@GetMapping("/")
+	//Pagina HTML inicial
+	/*@GetMapping("/")
 	public ModelAndView iniciar () {
 	    ModelAndView modelAndView = new ModelAndView();
 	    modelAndView.setViewName("inici");
 	    return modelAndView;
-	}
+	}*/
 	// 1 POST: /players : crea un jugador
 	@PostMapping("/players")
 	public String savePlayer(@RequestBody Player player) {
@@ -65,12 +66,12 @@ public class Controlador {
 
 	// 3 POST /players/{id}/games/ : un jugador específic realitza una tirada dels
 	// daus.
-	@PostMapping("/players/{usuari_id}/games")
-	public String crearGame(@PathVariable("usuari_id") int usuari_id, @RequestBody Game game) {
+	@PostMapping("/players/{usuariId}/games")
+	public String crearGame(@PathVariable("usuariId") int usuariid, @RequestBody Game game) {
 
 		String ResultatTirada;
 		//game.setId(idGame);
-		game.setUsuari_id(usuari_id);
+		game.setUsuariId(usuariid);
 		game.setDau1(((int) (Math.random() * (6 - 1)) + 1));
 		game.setDau2(((int) (Math.random() * (6 - 1)) + 1));
 
@@ -83,7 +84,7 @@ public class Controlador {
 		}
 
 		gameRepositori.save(game);
-		idGame++;
+		//idGame++;
 		return ResultatTirada;
 	}
 
