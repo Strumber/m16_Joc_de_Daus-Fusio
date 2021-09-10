@@ -13,8 +13,8 @@ CREATE TABLE if not exists GAME (
     dau1 integer,
 	dau2 integer,
 	resultat Boolean, 
-	usuariId integer
+	Id_Usuari integer
 );
 
 ALTER TABLE GAME
-ADD FOREIGN KEY (USUARIID) REFERENCES PLAYERS(id);
+ADD FOREIGN KEY (Id_Usuari) REFERENCES PLAYERS(id);

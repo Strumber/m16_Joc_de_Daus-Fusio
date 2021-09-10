@@ -33,9 +33,9 @@ public class Game {
 	    @Column(name = "resultat")
 	    private boolean resultat;
 	    
-	    //@Field(name="usuariId")
-	    @Column(name = "usuariiId")
-	    private int usuariId;
+	    //@Field(name="IdUsuari")
+	    @Column(name = "Id_Usuari")
+	    private int idUsuari;
 	    
 	    //Constructor per defecte
 	    
@@ -45,7 +45,9 @@ public class Game {
 	    
 	    //Getter & Setters
 	    
-	    public int getId() {
+	    	
+
+		public int getId() {
 			return id;
 		}
 
@@ -77,20 +79,18 @@ public class Game {
 			this.resultat = resultat;
 		}
 
-		
-
-		public int getUsuariId() {
-			return usuariId;
+		public int getIdUsuari() {
+			return idUsuari;
 		}
 
-		public void setUsuariId(int usuariId) {
-			this.usuariId = usuariId;
+		public void setIdUsuari(int idUsuari) {
+			this.idUsuari = idUsuari;
 		}
 
 		@Override
 		public String toString() {
-			return "Game [id=" + id + ", dau1=" + dau1 + ", dau2=" + dau2 + ", resultat=" + resultat + ", usuariid="
-					+ usuariId + "]";
+			return "Game [id=" + id + ", dau1=" + dau1 + ", dau2=" + dau2 + ", resultat=" + resultat + ", idUsuari="
+					+ idUsuari + "]";
 		}
 	    
 		

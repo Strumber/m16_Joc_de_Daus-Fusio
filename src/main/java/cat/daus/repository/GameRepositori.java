@@ -11,7 +11,7 @@ import cat.daus.model.Game;
 
 //para mySql
 public interface GameRepositori extends JpaRepository<Game, Integer> {
-	List<Game> findGamesByUsuariId (int usuariid);
-	boolean existsGamesByUsuariId(int usuariid);
-	int deleteGamesByUsuariId (int usuariid);
+	List<Game> findGamesByIdUsuari (int IdUsuari);
+	boolean existsGamesByIdUsuari(int IdUsuari);
+	int deleteGamesByIdUsuari (int IdUsuari);
 }
